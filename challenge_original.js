@@ -124,33 +124,33 @@
     }
 
     const menuButton = button.cloneNode();
-    menuButton.textContent = '¥ƒƒjƒ…[';
+    menuButton.textContent = 'â–¼ãƒ¡ãƒ‹ãƒ¥ãƒ¼';
     menuButton.addEventListener('click', ()=>{
       const isSubMenuOpen = subMenu.style.display === 'flex';
       subMenu.style.display = isSubMenuOpen ? 'none' : 'flex';
     })
 
     const equipButton = button.cloneNode();
-    equipButton.textContent = '¡‘•”õ';
+    equipButton.textContent = 'â– è£…å‚™';
     equipButton.addEventListener('click', ()=>{
       panel.style.display = 'flex';
     });
 
     const toggleViewButton = button.cloneNode();
-    toggleViewButton.innerText = '•\¦\nØ‚è‘Ö‚¦';
+    toggleViewButton.innerText = 'è¡¨ç¤º\nåˆ‡ã‚Šæ›¿ãˆ';
     toggleViewButton.addEventListener('click', ()=>{
       toggleCellViewMode();
     })
 
 
     const refreshButton = button.cloneNode();
-    refreshButton.innerText = 'ƒGƒŠƒAî•ñ\nXV';
+    refreshButton.innerText = 'ã‚¨ãƒªã‚¢æƒ…å ±\næ›´æ–°';
     refreshButton.addEventListener('click',()=>{
       fetchAreaInfo(false);
     });
 
     const skipAreaInfoButton = button.cloneNode();
-    skipAreaInfoButton.innerText = 'ƒZƒ‹î•ñ\nƒXƒLƒbƒv';
+    skipAreaInfoButton.innerText = 'ã‚»ãƒ«æƒ…å ±\nã‚¹ã‚­ãƒƒãƒ—';
     skipAreaInfoButton.style.color = '#fff';
     if (settings.skipArenaInfo) {
       skipAreaInfoButton.style.background = '#46f';
@@ -194,13 +194,13 @@
       div.style.height = '100%';
 
       const cellButton = subButton.cloneNode();
-      cellButton.innerText = 'ƒGƒŠƒAî•ñ\nÄæ“¾';
+      cellButton.innerText = 'ã‚¨ãƒªã‚¢æƒ…å ±\nå†å–å¾—';
       cellButton.addEventListener('click',()=>{
         fetchAreaInfo(true);
       });
 
       const skipAutoEquipButton = subButton.cloneNode();
-      skipAutoEquipButton.textContent = '©“®‘•”õ';
+      skipAutoEquipButton.textContent = 'è‡ªå‹•è£…å‚™';
       skipAutoEquipButton.style.color = '#fff';
       skipAutoEquipButton.classList.add('skip-auto-equip');
       if (settings.skipAutoEquip) {
@@ -236,7 +236,7 @@
 
 
       const autoJoinButton = subButton.cloneNode();
-      autoJoinButton.innerText = '©“®Q‰Á\nƒ‚[ƒh';
+      autoJoinButton.innerText = 'è‡ªå‹•å‚åŠ \nãƒ¢ãƒ¼ãƒ‰';
       autoJoinButton.style.background = '#ffb300';
       autoJoinButton.style.color = '#000';
       autoJoinButton.addEventListener('click',()=>{
@@ -285,8 +285,8 @@
         })
 
         const inputs = {
-          teamName: [input.cloneNode(),'ƒ`[ƒ€–¼'],
-          teamColor: [input.cloneNode(),'ƒ`[ƒ€ƒJƒ‰[']
+          teamName: [input.cloneNode(),'ãƒãƒ¼ãƒ å'],
+          teamColor: [input.cloneNode(),'ãƒãƒ¼ãƒ ã‚«ãƒ©ãƒ¼']
         }
         for (const key of Object.keys(inputs)) {
           const label_ = label.cloneNode();
@@ -307,7 +307,7 @@
 
         const description = document.createElement('p');
         description.style.fontSize = '90%';
-        description.innerText = 'ƒ`[ƒ€ƒJƒ‰[‚Í¬•¶š/‘å•¶š‚à³Šm‚É“ü—Í‚µ‚Ä‚­‚¾‚³‚¢Bi©w‚Ì—×Úƒ^ƒCƒ‹æ“¾‚É•K—vj\n‚ ‚ç‚©‚¶‚ß‘•”õƒpƒlƒ‹‚©‚çƒGƒŠ[ƒg‚àŠÜ‚ßŠeƒ‰ƒ“ƒN‚Ì‘•”õ‚ğ“o˜^‚µ‚Ä‚­‚¾‚³‚¢BiŠ‚µ‚Ä‚¢‚È‚¢ê‡‚Íœ‚­j\n¦‘•”õ‚ğ“o˜^‚µ‚Ä‚¢‚È‚¢‚Æ¬Œ÷—¦‚ª’á‰º‚µ‚Ü‚·B'
+        description.innerText = 'ãƒãƒ¼ãƒ ã‚«ãƒ©ãƒ¼ã¯å°æ–‡å­—/å¤§æ–‡å­—ã‚‚æ­£ç¢ºã«å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚ï¼ˆè‡ªé™£ã®éš£æ¥ã‚¿ã‚¤ãƒ«å–å¾—ã«å¿…è¦ï¼‰\nã‚ã‚‰ã‹ã˜ã‚è£…å‚™ãƒ‘ãƒãƒ«ã‹ã‚‰ã‚¨ãƒªãƒ¼ãƒˆã‚‚å«ã‚å„ãƒ©ãƒ³ã‚¯ã®è£…å‚™ã‚’ç™»éŒ²ã—ã¦ãã ã•ã„ã€‚ï¼ˆæ‰€æŒã—ã¦ã„ãªã„å ´åˆã¯é™¤ãï¼‰\nâ€»è£…å‚™ã‚’ç™»éŒ²ã—ã¦ã„ãªã„ã¨æˆåŠŸç‡ãŒä½ä¸‹ã—ã¾ã™ã€‚'
         div.append(description,closeButton);
         autoJoinSettingsDialog.append(div);
       })();
@@ -329,21 +329,21 @@
         log.classList.add('auto-join-log');
 
         const settingsButton = document.createElement('button');
-        settingsButton.textContent = 'İ’è';
+        settingsButton.textContent = 'è¨­å®š';
         settingsButton.addEventListener('click', ()=>{
           autoJoinSettingsDialog.showModal();
           clearInterval(autoJoinIntervalId);
         })
         const closeButton = document.createElement('button');
         closeButton.style.fontSize = '100%';
-        closeButton.textContent = '©“®Q‰Áƒ‚[ƒh‚ğI—¹';
+        closeButton.textContent = 'è‡ªå‹•å‚åŠ ãƒ¢ãƒ¼ãƒ‰ã‚’çµ‚äº†';
         closeButton.addEventListener('click', ()=>{
           autoJoinDialog.close();
         })
-        //closeButton.autofocus = true; // input‚Ö‚ÌƒI[ƒgƒtƒH[ƒJƒX‘j~
+        //closeButton.autofocus = true; // inputã¸ã®ã‚ªãƒ¼ãƒˆãƒ•ã‚©ãƒ¼ã‚«ã‚¹é˜»æ­¢
         const p = document.createElement('p');
-        //p.textContent = '‚±‚Ì‰æ–Ê‚ğŠJ‚¢‚½‚Ü‚Ü‚É‚µ‚Ä‚¨‚­‚±‚ÆBÅ’Z600•b';
-        p.textContent = '‚±‚Ì‰æ–Ê‚ğŠJ‚¢‚½‚Ü‚Ü‚É‚µ‚Ä‚¨‚­‚±‚Æ';
+        //p.textContent = 'ã“ã®ç”»é¢ã‚’é–‹ã„ãŸã¾ã¾ã«ã—ã¦ãŠãã“ã¨ã€‚æœ€çŸ­600ç§’';
+        p.textContent = 'ã“ã®ç”»é¢ã‚’é–‹ã„ãŸã¾ã¾ã«ã—ã¦ãŠãã“ã¨';
         p.style.margin = '0';
 
         container.append(log, p, settingsButton, closeButton);
@@ -352,7 +352,7 @@
 
 
       const settingsButton = subButton.cloneNode();
-      settingsButton.textContent = 'İ’è';
+      settingsButton.textContent = 'è¨­å®š';
       settingsButton.style.background = '#ffb300';
       settingsButton.style.color = '#000';
       settingsButton.addEventListener('click', ()=>{
@@ -360,7 +360,7 @@
       })
 
       const rangeAttackButton = subButton.cloneNode();
-      rangeAttackButton.textContent = '”ÍˆÍUŒ‚';
+      rangeAttackButton.textContent = 'ç¯„å›²æ”»æ’ƒ';
       rangeAttackButton.style.background = '#f64';
       rangeAttackButton.style.color = '#fff';
       rangeAttackButton.addEventListener('click', ()=>{
@@ -369,7 +369,7 @@
       })
 
       const closeSlideMenuButton = subButton.cloneNode();
-      closeSlideMenuButton.textContent = '‚â‚ß‚é';
+      closeSlideMenuButton.textContent = 'ã‚„ã‚ã‚‹';
       closeSlideMenuButton.style.background = '#888';
       closeSlideMenuButton.style.color = '#fff';
       closeSlideMenuButton.addEventListener('click', ()=>{
@@ -378,7 +378,7 @@
       })
 
       const startRangeAttackButton = subButton.cloneNode();
-      startRangeAttackButton.textContent = 'UŒ‚ŠJn';
+      startRangeAttackButton.textContent = 'æ”»æ’ƒé–‹å§‹';
       startRangeAttackButton.style.background = '#f64';
       startRangeAttackButton.style.color = '#fff';
       startRangeAttackButton.addEventListener('click', async()=>{
@@ -391,7 +391,7 @@
       })
 
       const pauseRangeAttackButton = subButton.cloneNode();
-      pauseRangeAttackButton.textContent = '’†’f';
+      pauseRangeAttackButton.textContent = 'ä¸­æ–­';
       pauseRangeAttackButton.style.background = '#888';
       pauseRangeAttackButton.style.color = '#fff';
       pauseRangeAttackButton.addEventListener('click', ()=>{
@@ -401,7 +401,7 @@
       })
 
       const resumeRangeAttackButton = subButton.cloneNode();
-      resumeRangeAttackButton.textContent = 'ÄŠJ';
+      resumeRangeAttackButton.textContent = 'å†é–‹';
       resumeRangeAttackButton.style.background = '#f64';
       resumeRangeAttackButton.style.color = '#fff';
       resumeRangeAttackButton.style.display = 'none';
@@ -428,7 +428,7 @@
       }
 
       const deselectButton = subButton.cloneNode();
-      deselectButton.textContent = '‘I‘ğ‰ğœ';
+      deselectButton.textContent = 'é¸æŠè§£é™¤';
       deselectButton.style.background = '#888';
       deselectButton.style.color = '#fff';
       deselectButton.addEventListener('click', ()=>{
@@ -440,7 +440,7 @@
       })
 
       const batchSelectButton = subButton.cloneNode();
-      batchSelectButton.textContent = 'ˆêŠ‡‘I‘ğ';
+      batchSelectButton.textContent = 'ä¸€æ‹¬é¸æŠ';
       batchSelectButton.style.background = '#ffb300';
       batchSelectButton.style.color = '#000';
       batchSelectButton.addEventListener('click', ()=>{
@@ -468,7 +468,7 @@
             const cells = document.querySelectorAll('.cell');
             cells.forEach(cell => {
               const cellRank = cell.querySelector('p').textContent;
-              const regex = new RegExp(`\\b${rank}(‚¾‚¯)?e?$`);
+              const regex = new RegExp(`\\b${rank}(ã ã‘)?e?$`);
               const match = cellRank.match(regex);
               if(match) {
                 cell.classList.add('selected');
@@ -486,7 +486,7 @@
         closeButton.style.width = '4.5em';
         closeButton.style.background = '#888';
         closeButton.style.color = '#fff';
-        closeButton.textContent = '‚â‚ß‚é';
+        closeButton.textContent = 'ã‚„ã‚ã‚‹';
         closeButton.addEventListener('click', ()=>{
           batchSelectMenu.style.display = 'none';
         })
@@ -551,7 +551,7 @@
     }
 
     const challengeButton = button.cloneNode();
-    challengeButton.textContent = 'ƒGƒŠƒA‚É’§‚Ş';
+    challengeButton.textContent = 'ã‚¨ãƒªã‚¢ã«æŒ‘ã‚€';
     challengeButton.style.flexGrow = '2';
     challengeButton.addEventListener('click', async(e)=>{
       const table = arenaField.querySelector('table');
@@ -562,27 +562,27 @@
     })
 
     const reinforceButton = button.cloneNode();
-    reinforceButton.textContent = '‹­‰»‚·‚é';
+    reinforceButton.textContent = 'å¼·åŒ–ã™ã‚‹';
     reinforceButton.style.flexGrow = '1';
     reinforceButton.addEventListener('click', ()=>{
       arenaModDialog.dataset.action = 'ReinforceArena';
-      modButton.textContent = '‹­‰»‚·‚é';
-      p.textContent = `–ØŞ: ${wood}, “S: ${steel} (1pt‚É‚Â‚«Še25ŒÂ)`;
+      modButton.textContent = 'å¼·åŒ–ã™ã‚‹';
+      p.textContent = `æœ¨æ: ${wood}, é‰„: ${steel} (1ptã«ã¤ãå„25å€‹)`;
       arenaModDialog.show();
     })
 
     const siegeButton = button.cloneNode();
-    siegeButton.textContent = 'ã‘Ì‰»';
+    siegeButton.textContent = 'å¼±ä½“åŒ–';
     siegeButton.style.flexGrow = '1';
     siegeButton.addEventListener('click', ()=>{
       arenaModDialog.dataset.action = 'SiegeArena';
-      modButton.textContent = 'ã‘Ì‰»';
-      p.textContent = `–ØŞ: ${wood}, “S: ${steel} (1pt‚É‚Â‚«Še25ŒÂ)`;
+      modButton.textContent = 'å¼±ä½“åŒ–';
+      p.textContent = `æœ¨æ: ${wood}, é‰„: ${steel} (1ptã«ã¤ãå„25å€‹)`;
       arenaModDialog.show();
     })
 
     const closeButton = button.cloneNode();
-    closeButton.textContent = '~';
+    closeButton.textContent = 'Ã—';
     closeButton.marginLeft = 'auto';
     closeButton.style.fontSize = '24px';
     closeButton.style.width = '48px';
@@ -609,7 +609,7 @@
 
       const input = document.createElement('input');
       input.type = 'number';
-      input.placeholder = '‰ü‘¢‚Ì—Ê';
+      input.placeholder = 'æ”¹é€ ã®é‡';
 
       modButton.addEventListener('click', ()=>{
         const amt = Number(input.value);
@@ -622,7 +622,7 @@
 
       input.addEventListener('keydown', (e)=>{
         if (e.key === "Enter") {
-          e.preventDefault(); // ‚±‚ê‚ª–³‚¢‚Ædialog‚ª•Â‚¶‚È‚¢
+          e.preventDefault(); // ã“ã‚ŒãŒç„¡ã„ã¨dialogãŒé–‰ã˜ãªã„
           const amt = Number(input.value);
           const table = arenaField.querySelector('table');
           const { row, col } = table.dataset;
@@ -648,11 +648,11 @@
         const res = await fetch('/teamvol/', options);
         if(!res.ok) throw new Error('/teamvol/ failed to load');
         const text = await res.text();
-        if(text.includes('‘Œ¹ƒpƒbƒN‚ğŠJ‚¯‚é')) {
+        if(text.includes('è³‡æºãƒ‘ãƒƒã‚¯ã‚’é–‹ã‘ã‚‹')) {
           open('/craft', '_blank');
           return;
         }
-        if(text !== '‰ü‘¢¬Œ÷') throw new Error(text);
+        if(text !== 'æ”¹é€ æˆåŠŸ') throw new Error(text);
         wood = wood - 25 * Math.trunc(amt);
         steel = steel - 25 * Math.trunc(amt);
         arenaResult.textContent = text;
@@ -796,12 +796,12 @@
     header.style.display = 'flex';
 
     const h2 = document.createElement('h2');
-    h2.textContent = 'İ’è'
+    h2.textContent = 'è¨­å®š'
     h2.style.fontSize = '1.2rem';
     h2.style.margin = '2px';
 
     const closeButton = button.cloneNode();
-    closeButton.textContent = '~';
+    closeButton.textContent = 'Ã—';
     closeButton.style.marginLeft = 'auto';
     closeButton.style.background = 'none';
     closeButton.style.border = 'none';
@@ -823,7 +823,7 @@
 
     (()=>{
       const saveButton = button.cloneNode();
-      saveButton.textContent = '•Û‘¶';
+      saveButton.textContent = 'ä¿å­˜';
       saveButton.addEventListener('click', ()=>{
         const settingElements = settingsMenu.querySelectorAll('[data-setting]');
         settingElements.forEach(elm => {
@@ -849,7 +849,7 @@
       })
 
       const cancelButton = button.cloneNode();
-      cancelButton.textContent = 'ƒLƒƒƒ“ƒZƒ‹';
+      cancelButton.textContent = 'ã‚­ãƒ£ãƒ³ã‚»ãƒ«';
       cancelButton.addEventListener('click', ()=>{
         refreshSettings();
         settingsDialog.close();
@@ -939,130 +939,130 @@
       const toolbar = container.cloneNode();
       addHeader('toolbar', toolbar);
       const arenaResult = container.cloneNode();
-      addHeader('ƒAƒŠ[ƒiƒƒO', arenaResult);
+      addHeader('ã‚¢ãƒªãƒ¼ãƒŠãƒ­ã‚°', arenaResult);
       const arenaField = container.cloneNode();
-      addHeader('ƒAƒŠ[ƒiî•ñ', arenaField);
+      addHeader('ã‚¢ãƒªãƒ¼ãƒŠæƒ…å ±', arenaField);
       //const grid = container.cloneNode();
-      //addHeader('ƒOƒŠƒbƒh', grid);
+      //addHeader('ã‚°ãƒªãƒƒãƒ‰', grid);
       const settingsPanel = container.cloneNode();
-      addHeader('İ’èƒpƒlƒ‹', settingsPanel);
+      addHeader('è¨­å®šãƒ‘ãƒãƒ«', settingsPanel);
       const equipPanel = container.cloneNode();
-      addHeader('‘•”õƒpƒlƒ‹', equipPanel);
+      addHeader('è£…å‚™ãƒ‘ãƒãƒ«', equipPanel);
 
       const settingItems = {
         toolbarPosition: {
-          text: 'ˆÊ’u:',
+          text: 'ä½ç½®:',
           type: 'select',
           options: {
-            left: '¶Šñ‚¹',
-            right: '‰EŠñ‚¹',
-            center: '’†‰›Šñ‚¹'
+            left: 'å·¦å¯„ã›',
+            right: 'å³å¯„ã›',
+            center: 'ä¸­å¤®å¯„ã›'
           },
           parent: toolbar
         },
         toolbarPositionLength: {
-          text: '’[‚Ì‹——£:',
+          text: 'ç«¯ã®è·é›¢:',
           type: 'width',
           parent: toolbar
         },
         arenaResultScrollPosition: {
-          text: 'ƒXƒNƒ[ƒ‹ˆÊ’u:',
+          text: 'ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ä½ç½®:',
           type: 'select',
           options: {
-            top: 'ã',
-            bottom: '‰º'
+            top: 'ä¸Š',
+            bottom: 'ä¸‹'
           },
           parent: arenaResult
         },
         arenaResultBottom: {
-          text: '‰º•”‚Ì‹——£:',
+          text: 'ä¸‹éƒ¨ã®è·é›¢:',
           type: 'height',
           parent: arenaResult
         },
         arenaResultPosition: {
-          text: 'ˆÊ’u:',
+          text: 'ä½ç½®:',
           type: 'select',
           options: {
-            right: '‰EŠñ‚¹',
-            left: '¶Šñ‚¹'
+            right: 'å³å¯„ã›',
+            left: 'å·¦å¯„ã›'
           },
           parent: arenaResult
         },
         arenaResultPositionLength: {
-          text: '¶’[‚©‚ç‚Ì‹——£:',
+          text: 'å·¦ç«¯ã‹ã‚‰ã®è·é›¢:',
           type: 'width',
           parent: arenaResult
         },
         arenaResultHeight: {
-          text: 'ƒƒO‚Ì‚‚³:',
+          text: 'ãƒ­ã‚°ã®é«˜ã•:',
           type: 'height',
           parent: arenaResult
         },
         arenaResultWidth: {
-          text: 'ƒƒO‚Ì‰¡•:',
+          text: 'ãƒ­ã‚°ã®æ¨ªå¹…:',
           type: 'width',
           parent: arenaResult
         },
         arenaFieldBottom: {
-          text: '‰º•”‚Ì‹——£:',
+          text: 'ä¸‹éƒ¨ã®è·é›¢:',
           type: 'height',
           parent: arenaField
         },
         arenaFieldPosition: {
-          text: 'ˆÊ’u:',
+          text: 'ä½ç½®:',
           type: 'select',
           options: {
-            left: '¶Šñ‚¹',
-            right: '‰EŠñ‚¹',
-            center: '’†‰›Šñ‚¹'
+            left: 'å·¦å¯„ã›',
+            right: 'å³å¯„ã›',
+            center: 'ä¸­å¤®å¯„ã›'
           },
           parent: arenaField
         },
         arenaFieldPositionLength: {
-          text: '’[‚©‚ç‚Ì‹——£:',
+          text: 'ç«¯ã‹ã‚‰ã®è·é›¢:',
           type: 'width',
           parent: arenaField
         },
         arenaFieldWidth: {
-          text: '‰¡•:',
+          text: 'æ¨ªå¹…:',
           type: 'width',
           parent: arenaField
         },
         settingsPanelPosition: {
-          text: 'ˆÊ’u:',
+          text: 'ä½ç½®:',
           type: 'select',
           options: {
-            right: '‰EŠñ‚¹',
-            left: '¶Šñ‚¹'
+            right: 'å³å¯„ã›',
+            left: 'å·¦å¯„ã›'
           },
           parent: settingsPanel
         },
         settingsPanelHeight: {
-          text: '‚‚³:',
+          text: 'é«˜ã•:',
           type: 'height',
           parent: settingsPanel
         },
         settingsPanelWidth: {
-          text: '‰¡•:',
+          text: 'æ¨ªå¹…:',
           type: 'width',
           parent: settingsPanel
         },
         equipPanelPosition: {
-          text: 'ˆÊ’u:',
+          text: 'ä½ç½®:',
           type: 'select',
           options: {
-            right: '‰EŠñ‚¹',
-            left: '¶Šñ‚¹'
+            right: 'å³å¯„ã›',
+            left: 'å·¦å¯„ã›'
           },
           parent: equipPanel
         },
         equipPanelHeight: {
-          text: '‚‚³:',
+          text: 'é«˜ã•:',
           type: 'height',
           parent: equipPanel
         },
         equipPanelWidth: {
-          text: '‰¡•:',
+          text: 'æ¨ªå¹…:',
           type: 'width',
           parent: equipPanel
         }
@@ -1111,7 +1111,7 @@
       link.href = 'https://donguri-k.github.io/tools/arena-assist-tool';
       link.target = '_blank';
       const author = document.createElement('input');
-      author.value = 'ìÒ [ID: 7234e634]';
+      author.value = 'ä½œè€… [ID: 7234e634]';
       author.style.color = '#666';
       author.style.background = 'none';
       author.style.margin = '2px';
@@ -1132,7 +1132,7 @@
 
   document.body.append(settingsDialog);
 
-  //-- ‘•”õ --//
+  //-- è£…å‚™ --//
   const panel = document.createElement('div');
   panel.style.position = 'fixed';
   panel.style.top = '0';
@@ -1176,7 +1176,7 @@
     // input.style.background = '#eee';
     // input.style.color = '#000';
     // input.style.borderRadius = 'unset';
-    // input.placeholder = 'ƒtƒBƒ‹ƒ^c';
+    // input.placeholder = 'ãƒ•ã‚£ãƒ«ã‚¿â€¦';
     button.type = 'button';
     button.style.borderRadius = 'unset';
     button.style.border = 'solid 1px #000';
@@ -1202,7 +1202,7 @@
     showEquipPreset();
 
     const resetCurrentEquip = document.createElement('div');
-    resetCurrentEquip.textContent = '‘•”õî•ñ‚ğƒŠƒZƒbƒg';
+    resetCurrentEquip.textContent = 'è£…å‚™æƒ…å ±ã‚’ãƒªã‚»ãƒƒãƒˆ';
     resetCurrentEquip.style.borderTop = 'solid 1px #000';
     resetCurrentEquip.style.cursor = 'pointer';
     resetCurrentEquip.style.color = '#a62';
@@ -1211,7 +1211,7 @@
     resetCurrentEquip.addEventListener('click', ()=>{
       localStorage.removeItem('current_equip');
       const stat = document.querySelector('.equip-preset-stat');
-      stat.textContent = 'Œ»İ‚Ì‘•”õî•ñ‚ğ‰Šú‰»';
+      stat.textContent = 'ç¾åœ¨ã®è£…å‚™æƒ…å ±ã‚’åˆæœŸåŒ–';
       weaponTable = null;
       armorTable = null;
       necklaceTable = null;
@@ -1233,7 +1233,7 @@
       } else if (currentMode === 'auto') {
         selectAutoEquipItems(presetLi, presetName, currentRank);
       } else if (currentMode === 'edit') {
-        alert('–¢À‘•');
+        alert('æœªå®Ÿè£…');
       }
     });
 
@@ -1248,7 +1248,7 @@
 
       /*
       const closeButton = button.cloneNode();
-      closeButton.textContent = '~';
+      closeButton.textContent = 'Ã—';
       closeButton.style.marginLeft = 'auto';
       closeButton.style.background = 'none';
       closeButton.style.border = 'none';
@@ -1262,7 +1262,7 @@
       */
 
       const addButton = button.cloneNode();
-      addButton.textContent = '’Ç‰Á';
+      addButton.textContent = 'è¿½åŠ ';
       addButton.addEventListener('click', async()=>{
         selectedEquips = {id:[], rank:[]};
         addButton.disabled = true;
@@ -1271,19 +1271,19 @@
       })
 
       const removeButton = button.cloneNode();
-      removeButton.textContent = 'íœ';
-      removeButton.dataset.text = 'íœ';
+      removeButton.textContent = 'å‰Šé™¤';
+      removeButton.dataset.text = 'å‰Šé™¤';
       removeButton.dataset.mode = 'remove';
       /*
       const editButton = button.cloneNode();
-      editButton.textContent = '•ÒW';
-      editButton.dataset.text = '•ÒW';
+      editButton.textContent = 'ç·¨é›†';
+      editButton.dataset.text = 'ç·¨é›†';
       editButton.dataset.mode = 'edit';
       */
 
       const equipSettingsButton = button.cloneNode();
-      equipSettingsButton.textContent = '‘•”õ“o˜^';
-      equipSettingsButton.dataset.text = '‘•”õ“o˜^';
+      equipSettingsButton.textContent = 'è£…å‚™ç™»éŒ²';
+      equipSettingsButton.dataset.text = 'è£…å‚™ç™»éŒ²';
       equipSettingsButton.dataset.mode = 'auto';
 
       const equipSettingsDialog = document.createElement('dialog');
@@ -1328,7 +1328,7 @@
         const closeButton = button.cloneNode();
         closeButton.style.width = '100px';
         closeButton.style.background = '#caa';
-        closeButton.textContent = '~';
+        closeButton.textContent = 'Ã—';
         closeButton.addEventListener('click',()=>{
           equipSettingsDialog.close();
         })
@@ -1336,16 +1336,16 @@
         const div2 = document.createElement('div');
         div2.style.textAlign = 'center';
         const toggleButton = button.cloneNode();
-        toggleButton.textContent = '‘Îí—p';
+        toggleButton.textContent = 'å¯¾æˆ¦ç”¨';
         toggleButton.style.width = '7em';
         toggleButton.style.background = '#acc';
         toggleButton.addEventListener('click',()=>{
           if (autoEquipMode === 'normal') {
             autoEquipMode = 'autojoin';
-            toggleButton.textContent = '©“®Q‰Á—p';
+            toggleButton.textContent = 'è‡ªå‹•å‚åŠ ç”¨';
           } else {
             autoEquipMode = 'normal';
-            toggleButton.textContent = '‘Îí—p';
+            toggleButton.textContent = 'å¯¾æˆ¦ç”¨';
           }
         })
 
@@ -1358,20 +1358,20 @@
           settings.autoEquipRandomly = checkRandom.checked;
           localStorage.setItem('aat_settings', JSON.stringify(settings));
         })
-        label.append(checkRandom, 'ƒ‰ƒ“ƒ_ƒ€‘•”õ');
+        label.append(checkRandom, 'ãƒ©ãƒ³ãƒ€ãƒ è£…å‚™');
 
         div.append(closeButton);
         div2.append(toggleButton,label);
 
         const description = document.createElement('div');
-        description.innerText = '‘Îí‚Ég—p‚·‚é‘•”õ‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢Bƒoƒgƒ‹ŠJn‘O‚É©“®“I‚É‘•”õ‚ğ•ÏX‚µ‚Ü‚·B•¡”“o˜^‚µ‚½ê‡‚ÍŠJn‚É‘•”õ‚·‚é‚à‚Ì‚ğ‘I‘ğ‚µ‚Ü‚·B\nƒqƒ“ƒg: ƒƒCƒ“‚Æ‚È‚é1‚Â‚ÌƒZƒbƒg‚ğg‚¤‚±‚Æ‚ª‚Ù‚Æ‚ñ‚Ç‚È‚ç1‚Â‚Ì‚İ“o˜^^•¡”‚Ì‘•”õ‚ğg‚¢•ª‚¯‚é‚±‚Æ‚ª‘½‚¢‚È‚ç•¡”“o˜^‚µ‚Ä‚¨‚­‚ÆØ‚è‘Ö‚¦‚ÌèŠÔ‚ª­‚È‚­‚È‚éB\n‚Ü‚½‚ÍAƒ‰ƒ“ƒ_ƒ€‘•”õ‚Éƒ`ƒFƒbƒN‚ğ“ü‚ê‚é‚ÆA“o˜^‚µ‚Ä‚ ‚é’†‚©‚ç©“®‚Åƒ‰ƒ“ƒ_ƒ€‚É‘I‘ğ\n\n©“®Q‰Á—p‚ğ“o˜^‚µ‚Ä‚¨‚­‚ÆA’Êí‚Ì‘Îí—p‚Æ‚Í•Ê‚Ì‘•”õ‚ğg—p‚·‚éB“o˜^‚µ‚Ä‚¢‚È‚¢ê‡‚Í‘Îí—p‘•”õ‚ğg—pB';
+        description.innerText = 'å¯¾æˆ¦ã«ä½¿ç”¨ã™ã‚‹è£…å‚™ã‚’é¸æŠã—ã¦ãã ã•ã„ã€‚ãƒãƒˆãƒ«é–‹å§‹å‰ã«è‡ªå‹•çš„ã«è£…å‚™ã‚’å¤‰æ›´ã—ã¾ã™ã€‚è¤‡æ•°ç™»éŒ²ã—ãŸå ´åˆã¯é–‹å§‹æ™‚ã«è£…å‚™ã™ã‚‹ã‚‚ã®ã‚’é¸æŠã—ã¾ã™ã€‚\nãƒ’ãƒ³ãƒˆ: ãƒ¡ã‚¤ãƒ³ã¨ãªã‚‹1ã¤ã®ã‚»ãƒƒãƒˆã‚’ä½¿ã†ã“ã¨ãŒã»ã¨ã‚“ã©ãªã‚‰1ã¤ã®ã¿ç™»éŒ²ï¼è¤‡æ•°ã®è£…å‚™ã‚’ä½¿ã„åˆ†ã‘ã‚‹ã“ã¨ãŒå¤šã„ãªã‚‰è¤‡æ•°ç™»éŒ²ã—ã¦ãŠãã¨åˆ‡ã‚Šæ›¿ãˆã®æ‰‹é–“ãŒå°‘ãªããªã‚‹ã€‚\nã¾ãŸã¯ã€ãƒ©ãƒ³ãƒ€ãƒ è£…å‚™ã«ãƒã‚§ãƒƒã‚¯ã‚’å…¥ã‚Œã‚‹ã¨ã€ç™»éŒ²ã—ã¦ã‚ã‚‹ä¸­ã‹ã‚‰è‡ªå‹•ã§ãƒ©ãƒ³ãƒ€ãƒ ã«é¸æŠ\n\nè‡ªå‹•å‚åŠ ç”¨ã‚’ç™»éŒ²ã—ã¦ãŠãã¨ã€é€šå¸¸ã®å¯¾æˆ¦ç”¨ã¨ã¯åˆ¥ã®è£…å‚™ã‚’ä½¿ç”¨ã™ã‚‹ã€‚ç™»éŒ²ã—ã¦ã„ãªã„å ´åˆã¯å¯¾æˆ¦ç”¨è£…å‚™ã‚’ä½¿ç”¨ã€‚';
         description.style.fontSize = '70%';
 
         equipSettingsDialog.append(div, div2, description);
       })();
 
       const backupButton = button.cloneNode();
-      backupButton.innerText = 'ƒoƒbƒN\nƒAƒbƒv';
+      backupButton.innerText = 'ãƒãƒƒã‚¯\nã‚¢ãƒƒãƒ—';
 
       const backupDialog = document.createElement('dialog');
       backupDialog.style.background = '#fff';
@@ -1388,7 +1388,7 @@
 
         const div = document.createElement('div');
         const saveButton = button.cloneNode();
-        saveButton.textContent = '•Û‘¶';
+        saveButton.textContent = 'ä¿å­˜';
         saveButton.addEventListener('click', ()=>{
           const isSuccess = importEquipPresets(textarea.value);
           if(isSuccess) {
@@ -1409,10 +1409,10 @@
           }
         });
         const copyButton = button.cloneNode();
-        copyButton.textContent = 'ƒRƒs[';
+        copyButton.textContent = 'ã‚³ãƒ”ãƒ¼';
         copyButton.addEventListener('click', ()=>{navigator.clipboard.writeText(textarea.value).then(alert('copy'));})
         const closeButton = button.cloneNode();
-        closeButton.textContent = '•Â‚¶‚é';
+        closeButton.textContent = 'é–‰ã˜ã‚‹';
         closeButton.addEventListener('click', ()=>{backupDialog.close()})
         div.append(saveButton, copyButton, closeButton);
         backupDialog.append(textarea, div);
@@ -1447,11 +1447,11 @@
       function setMode(mode, button) {
         resetMode();
         currentMode = mode;
-        button.textContent = 'Š®—¹';
+        button.textContent = 'å®Œäº†';
         button.classList.add('active');
-        if(mode === 'remove') stat.textContent = 'íœ‚µ‚½‚¢‚à‚Ì‚ğ‘I‘ğ';
-        else if (mode === 'edit') stat.textContent = 'ƒNƒŠƒbƒN‚Å•ÒW';
-        else if (mode === 'auto') stat.textContent = 'ƒNƒŠƒbƒN‚Å‘I‘ğ(•¡”‘I‘ğ‰Â)';
+        if(mode === 'remove') stat.textContent = 'å‰Šé™¤ã—ãŸã„ã‚‚ã®ã‚’é¸æŠ';
+        else if (mode === 'edit') stat.textContent = 'ã‚¯ãƒªãƒƒã‚¯ã§ç·¨é›†';
+        else if (mode === 'auto') stat.textContent = 'ã‚¯ãƒªãƒƒã‚¯ã§é¸æŠ(è¤‡æ•°é¸æŠå¯)';
       }
 
       function resetMode() {
@@ -1502,7 +1502,7 @@
     equipField.style.maxWidth = '90vw';
     equipField.style.height = '95vh';
     const closeButton = button.cloneNode();
-    closeButton.textContent = '~';
+    closeButton.textContent = 'Ã—';
     closeButton.style.position = 'absolute';
     closeButton.style.background = 'none';
     closeButton.style.border = 'none';
@@ -1536,7 +1536,7 @@
     p.style.height = '28px';
 
     const equipSwitchButton = button.cloneNode();
-    equipSwitchButton.textContent = '$25B6•Ší';
+    equipSwitchButton.textContent = '$25B6æ­¦å™¨';
     equipSwitchButton.style.width = '4em';
     equipSwitchButton.style.height = '42px';
     equipSwitchButton.style.fontSize = '';
@@ -1547,23 +1547,23 @@
         weaponTable.style.display = 'none';
         armorTable.style.display = '';
         necklaceTable.style.display = 'none';
-        event.target.textContent = '$25B6–h‹ï';
+        event.target.textContent = '$25B6é˜²å…·';
       } else if (!armorTable.style.display) {
         weaponTable.style.display = 'none';
         armorTable.style.display = 'none';
         necklaceTable.style.display = '';
-        event.target.textContent = '$25B6ñ';
+        event.target.textContent = '$25B6é¦–';
       } else if (!necklaceTable.style.display) {
         weaponTable.style.display = '';
         armorTable.style.display = 'none';
         necklaceTable.style.display = 'none';
-        event.target.textContent = '$25B6•Ší';
+        event.target.textContent = '$25B6æ­¦å™¨';
       }
     });
 
     // register
     const registerButton = button.cloneNode();
-    registerButton.textContent = '“o˜^';
+    registerButton.textContent = 'ç™»éŒ²';
     registerButton.style.width = '4em';
     registerButton.style.height = '42px';
     registerButton.style.fontSize = '';
@@ -1575,14 +1575,14 @@
       dialog.style.color = '#000';
       dialog.style.textAlign = 'center';
       const presetNameInput = document.createElement('input');
-      presetNameInput.placeholder = 'ƒvƒŠƒZƒbƒg–¼';
+      presetNameInput.placeholder = 'ãƒ—ãƒªã‚»ãƒƒãƒˆå';
       presetNameInput.style.background = '#fff';
       presetNameInput.style.color = '#000';
       const p = document.createElement('p');
-      p.textContent = '“¯–¼‚ÌƒvƒŠƒZƒbƒg‚ª‘¶İ‚·‚éê‡‚Íã‘‚«‚³‚ê‚Ü‚·B';
+      p.textContent = 'åŒåã®ãƒ—ãƒªã‚»ãƒƒãƒˆãŒå­˜åœ¨ã™ã‚‹å ´åˆã¯ä¸Šæ›¸ãã•ã‚Œã¾ã™ã€‚';
       p.style.margin = '0';
       const confirmButton = button.cloneNode();
-      confirmButton.textContent = '•Û‘¶';
+      confirmButton.textContent = 'ä¿å­˜';
       confirmButton.addEventListener('click', ()=>{
         if(presetNameInput.value.trim() === '') return;
         saveEquipPreset(presetNameInput.value.substring(0,32), selectedEquips);
@@ -1591,7 +1591,7 @@
       })
       presetNameInput.addEventListener('keydown', (e)=>{
         if (e.key === "Enter") {
-          e.preventDefault(); // ‚±‚ê‚ª–³‚¢‚Ædialog‚ª•Â‚¶‚È‚¢
+          e.preventDefault(); // ã“ã‚ŒãŒç„¡ã„ã¨dialogãŒé–‰ã˜ãªã„
           if(presetNameInput.value.trim() === '') return;
           saveEquipPreset(presetNameInput.value.substring(0,32), selectedEquips);
           dialog.close();
@@ -1599,13 +1599,13 @@
         }
       })
       const cancelButton = button.cloneNode();
-      cancelButton.textContent = 'ƒLƒƒƒ“ƒZƒ‹';
+      cancelButton.textContent = 'ã‚­ãƒ£ãƒ³ã‚»ãƒ«';
       cancelButton.addEventListener('click', ()=>{dialog.close()});
       dialog.append(presetNameInput, confirmButton, cancelButton, p);
       equipField.append(dialog);
       registerButton.addEventListener('click', ()=>{
         if(!selectedEquips.id[0] && !selectedEquips.id[1] && !selectedEquips.id[2]) {
-          alert('‘•”õ‚ª–¢‘I‘ğ‚Å‚·');
+          alert('è£…å‚™ãŒæœªé¸æŠã§ã™');
           return;
         }
         dialog.showModal();
@@ -1638,7 +1638,7 @@
           const text = await res.text();
           const doc = new DOMParser().parseFromString(text, 'text/html');
           const h1 = doc.querySelector('h1');
-          if(h1?.textContent !== 'ƒAƒCƒeƒ€ƒoƒbƒO') throw new Error(text);
+          if(h1?.textContent !== 'ã‚¢ã‚¤ãƒ†ãƒ ãƒãƒƒã‚°') throw new Error(text);
           weaponTable = doc.querySelector('#weaponTable');
           armorTable = doc.querySelector('#armorTable');
           necklaceTable = doc.querySelector('#necklaceTable');
@@ -1685,7 +1685,7 @@
         }
       }
 
-      equipSwitchButton.textContent = '$25B6•Ší';
+      equipSwitchButton.textContent = '$25B6æ­¦å™¨';
       weaponTable.style.display = '';
       armorTable.style.display = 'none';
       necklaceTable.style.display = 'none';
@@ -1748,7 +1748,7 @@
         return true;
       } catch (e) {
         if (e instanceof SyntaxError) {
-          alert('‘®ƒGƒ‰[');
+          alert('æ›¸å¼ã‚¨ãƒ©ãƒ¼');
         }
         return false;
       }
@@ -1757,7 +1757,7 @@
 
 
     function removePresetItems(presetName) {
-      const userConfirmed = confirm(presetName + ' ‚ğíœ‚µ‚Ü‚·‚©H');
+      const userConfirmed = confirm(presetName + ' ã‚’å‰Šé™¤ã—ã¾ã™ã‹ï¼Ÿ');
       if(!userConfirmed) return;
       const stat = document.querySelector('.equip-preset-stat');
       const equipPresets = JSON.parse(localStorage.getItem('equipPresets')) || {};
@@ -1804,17 +1804,17 @@
       console.log(items[rank]);
     }
   })();
-  //-- ‚±‚±‚Ü‚Å --//
+  //-- ã“ã“ã¾ã§ --//
   async function setPresetItems (presetName) {
     let currentEquip = JSON.parse(localStorage.getItem('current_equip')) || [];
     const stat = document.querySelector('.equip-preset-stat');
-    if (stat.textContent === '‘•”õ’†...') return;
+    if (stat.textContent === 'è£…å‚™ä¸­...') return;
     const equipPresets = JSON.parse(localStorage.getItem('equipPresets')) || {};
     const fetchPromises = equipPresets[presetName].id
-      .filter(id => id !== undefined && id !== null && !currentEquip.includes(id)) // –¢“o˜^orŠù‚É‘•”õ’†‚Ì•”ˆÊ‚ÍœŠO
+      .filter(id => id !== undefined && id !== null && !currentEquip.includes(id)) // æœªç™»éŒ²oræ—¢ã«è£…å‚™ä¸­ã®éƒ¨ä½ã¯é™¤å¤–
       .map(id => fetch('https://donguri.5ch.net/equip/' + id));
 
-    stat.textContent = '‘•”õ’†...';
+    stat.textContent = 'è£…å‚™ä¸­...';
     try {
       const responses = await Promise.all(fetchPromises);
       const texts = await Promise.all(
@@ -1826,20 +1826,20 @@
         })
       );
 
-      if(texts.includes('‚Ç‚ñ‚®‚è‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½B')) {
-        throw new Error('ÄƒƒOƒCƒ“‚µ‚Ä‚­‚¾‚³‚¢');
-      } else if(texts.includes('ƒAƒCƒeƒ€‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½B')) {
-        throw new Error('ƒAƒCƒeƒ€‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½');
+      if(texts.includes('ã©ã‚“ãã‚ŠãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚')) {
+        throw new Error('å†ãƒ­ã‚°ã‚¤ãƒ³ã—ã¦ãã ã•ã„');
+      } else if(texts.includes('ã‚¢ã‚¤ãƒ†ãƒ ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚')) {
+        throw new Error('ã‚¢ã‚¤ãƒ†ãƒ ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸ');
       }
 
       const docs = texts.map(text => new DOMParser().parseFromString(text,'text/html'));
       const titles = docs.map(doc => doc.querySelector('h1')?.textContent);
-      if(titles.includes('‚Ç‚ñ‚®‚èŠî’n')) {
-        throw new Error('ÄƒƒOƒCƒ“‚µ‚Ä‚­‚¾‚³‚¢');
-      } else if (!titles.every(title => title === 'ƒAƒCƒeƒ€ƒoƒbƒO')) {
-        throw new Error('‘•”õƒGƒ‰[');
+      if(titles.includes('ã©ã‚“ãã‚ŠåŸºåœ°')) {
+        throw new Error('å†ãƒ­ã‚°ã‚¤ãƒ³ã—ã¦ãã ã•ã„');
+      } else if (!titles.every(title => title === 'ã‚¢ã‚¤ãƒ†ãƒ ãƒãƒƒã‚°')) {
+        throw new Error('è£…å‚™ã‚¨ãƒ©ãƒ¼');
       }
-      stat.textContent = 'Š®—¹: ' + presetName;
+      stat.textContent = 'å®Œäº†: ' + presetName;
       localStorage.setItem('current_equip', JSON.stringify(equipPresets[presetName].id));
       currentEquipName = presetName;
     } catch (e) {
@@ -1876,7 +1876,7 @@
       const text = await res.text();
       const doc = new DOMParser().parseFromString(text, 'text/html');
       const h1 = doc?.querySelector('h1')?.textContent;
-      if (h1 !== '‚Ç‚ñ‚®‚èƒ`[ƒ€í‚¢') throw new Error('title.ng info');
+      if (h1 !== 'ã©ã‚“ãã‚Šãƒãƒ¼ãƒ æˆ¦ã„') throw new Error('title.ng info');
 
       const currentCells = grid.querySelectorAll('.cell');
       const scriptContent = doc.querySelector('.grid > script').textContent;
@@ -2004,11 +2004,11 @@
       const text = await res.text();
       const doc = new DOMParser().parseFromString(text, 'text/html');
       const h1 = doc?.querySelector('h1')?.textContent;
-      if(h1 !== '‚Ç‚ñ‚®‚èƒ`[ƒ€í‚¢') throw new Error(`title.ng [${row}][${col}][${h1}]`);
+      if(h1 !== 'ã©ã‚“ãã‚Šãƒãƒ¼ãƒ æˆ¦ã„') throw new Error(`title.ng [${row}][${col}][${h1}]`);
       const rank = doc.querySelector('small')?.textContent || '';
       if(!rank) return Promise.reject(`rank.ng [${row}][${col}][${h1}]`);
       const leader = doc.querySelector('strong')?.textContent || '';
-      const shortenRank = rank.replace('[ƒGƒŠ[ƒg]','e').replace('‚©‚ç','-').replace(/(‚Ü‚Å|\[|\]|\||\s)/g,'');
+      const shortenRank = rank.replace('[ã‚¨ãƒªãƒ¼ãƒˆ]','e').replace('ã‹ã‚‰','-').replace(/(ã¾ã§|\[|\]|\||\s)/g,'');
       const teamname = doc.querySelector('table').rows[1]?.cells[2].textContent;
 
       const cell = elm.cloneNode();
@@ -2031,7 +2031,7 @@
         p.style.alignItems = 'center';
         p.style.lineHeight = '1';
         p.style.justifyContent = 'center';
-        const str = shortenRank.replace(/\w+-|‚¾‚¯/g,'');
+        const str = shortenRank.replace(/\w+-|ã ã‘/g,'');
         p.textContent = str;
         if (str.length === 3) p.style.fontSize = '14px';
         if (str.length === 4) p.style.fontSize = '13px';
@@ -2068,7 +2068,7 @@
     button.style.marginLeft = '2px';
 
     const editButton = button.cloneNode();
-    editButton.textContent = '¥';
+    editButton.textContent = 'â–¼';
     editButton.addEventListener('click', ()=>{
       editButton.style.display = 'none';
       editEndButton.style.display = '';
@@ -2123,30 +2123,30 @@
     })
 
     const helpButton = button.cloneNode();
-    helpButton.textContent = 'H';
+    helpButton.textContent = 'ï¼Ÿ';
     helpButton.addEventListener('click', ()=>{
       helpDialog.innerHTML = '';
       const div = document.createElement('div');
       div.style.lineHeight = '150%';
-      div.innerText = `E[¥]‚ğ‰Ÿ‚·‚ÆF‚ğ•ÒW‚Å‚«‚Ü‚·B•ÒWŒã‚Íˆê“x[ƒGƒŠƒAî•ñÄæ“¾]‚ğÀs‚µ‚Ä‚­‚¾‚³‚¢B
-      E•ÏX‚µ‚½ƒ`[ƒ€‚ÌƒZƒ‹‚Í[ƒGƒŠƒAî•ñXV]‚É•K‚¸æ“¾‚³‚ê‚é‚æ‚¤‚É‚È‚è‚Ü‚·B
-      *XV‚Ì“Ç‚İ‚İ‚ğ‘‚â‚µ‚½‚­‚È‚¢ê‡‚ÍA–³ˆÅ‚É•ÏX‚µ‚È‚¢‚±‚Æ‚ğ„§‚µ‚Ü‚·B
-      E“¯F‚Ìƒ`[ƒ€‚ª•¡”‘¶İ‚·‚éê‡A‚»‚ê‚¼‚ê‚ÌF‚ğ•ÏX‚·‚é‚±‚Æ‚Å“¯F‚Ì“h‚è‘Ö‚¦‚É‘Î‰‰Â”\‚Å‚·B(ƒJƒXƒ^ƒ€ƒJƒ‰[‚Åã‘‚«‚³‚ê‚½ƒZƒ‹‚Íí‚É“Ç‚İ‚İ‚Ì‘ÎÛ‚É‚È‚é‚½‚ß)
-      E•ÒW‚µ‚½F‚ğ–ß‚·‚É‚Í“ü—Í—“‚Ì•¶š‚ğ‘S‚ÄÁ‚µ‚½ó‘Ô‚Å•Û‘¶‚µ‚Ä‚­‚¾‚³‚¢B
+      div.innerText = `ãƒ»[â–¼]ã‚’æŠ¼ã™ã¨è‰²ã‚’ç·¨é›†ã§ãã¾ã™ã€‚ç·¨é›†å¾Œã¯ä¸€åº¦[ã‚¨ãƒªã‚¢æƒ…å ±å†å–å¾—]ã‚’å®Ÿè¡Œã—ã¦ãã ã•ã„ã€‚
+      ãƒ»å¤‰æ›´ã—ãŸãƒãƒ¼ãƒ ã®ã‚»ãƒ«ã¯[ã‚¨ãƒªã‚¢æƒ…å ±æ›´æ–°]æ™‚ã«å¿…ãšå–å¾—ã•ã‚Œã‚‹ã‚ˆã†ã«ãªã‚Šã¾ã™ã€‚
+      *æ›´æ–°æ™‚ã®èª­ã¿è¾¼ã¿ã‚’å¢—ã‚„ã—ãŸããªã„å ´åˆã¯ã€ç„¡é—‡ã«å¤‰æ›´ã—ãªã„ã“ã¨ã‚’æ¨å¥¨ã—ã¾ã™ã€‚
+      ãƒ»åŒè‰²ã®ãƒãƒ¼ãƒ ãŒè¤‡æ•°å­˜åœ¨ã™ã‚‹å ´åˆã€ãã‚Œãã‚Œã®è‰²ã‚’å¤‰æ›´ã™ã‚‹ã“ã¨ã§åŒè‰²ã®å¡—ã‚Šæ›¿ãˆã«å¯¾å¿œå¯èƒ½ã§ã™ã€‚(ã‚«ã‚¹ã‚¿ãƒ ã‚«ãƒ©ãƒ¼ã§ä¸Šæ›¸ãã•ã‚ŒãŸã‚»ãƒ«ã¯å¸¸ã«èª­ã¿è¾¼ã¿ã®å¯¾è±¡ã«ãªã‚‹ãŸã‚)
+      ãƒ»ç·¨é›†ã—ãŸè‰²ã‚’æˆ»ã™ã«ã¯å…¥åŠ›æ¬„ã®æ–‡å­—ã‚’å…¨ã¦æ¶ˆã—ãŸçŠ¶æ…‹ã§ä¿å­˜ã—ã¦ãã ã•ã„ã€‚
 
-      d—l (“Ç‚Ü‚È‚­‚Ä‚æ‚¢)F
-      [ƒGƒŠƒAî•ñÄæ“¾]‚Í‘SƒGƒŠƒA‚ÉƒAƒNƒZƒX‚µî•ñ‚ğæ“¾‚·‚é‚Ì‚É‘Î‚µA[ƒGƒŠƒAî•ñXV]‚ÍF‚ªXV‚³‚ê‚½ƒZƒ‹‚Ì‚İ‚ğæ“¾‚·‚é‚æ‚¤‚É‚µ‚Ä‚ ‚éB
-      ‚±‚±‚ÅA“¯F‚ÌA‚ÆB‚Ìƒ`[ƒ€‚ª‘¶İ‚·‚éó‹µ‚ğ‘z’è‚·‚éB
-      EB‚ÌF‚Ì‚İ‚ğ•ÒW‚µ‚½ê‡AA‚ª•Û‚·‚éƒZƒ‹‚ğB‚ªŠl“¾‚µ‚½ÛA•ÒW‘O‚ÌFî•ñ‚ª“¯ˆê‚Ì‚½‚ßƒZƒ‹î•ñ‚Ìæ“¾‚ªs‚í‚ê‚È‚¢B
-      EA‚ÆB‚Ì‘o•û‚ğ•ÒW‚µ‚Ä‚¨‚­‚ÆAA‚ª•Û‚·‚éƒZƒ‹‚Íí‚ÉFî•ñ‚ªXV‚³‚ê‚½ˆµ‚¢‚Æ‚È‚èæ“¾‘ÎÛ‚É‚È‚éB
-      —v‚·‚é‚ÉA“¯F‚Ìê‡‚Í‘S‚ÄF‚ğ•Ï‚¦‚Ä‚¨‚­‚Æ‚æ‚¢‚Æ‚¢‚¤‚±‚ÆB“¯F‚ª‚¢‚È‚­‚È‚Á‚½‚ç–ß‚¹‚ÎOK.
+      ä»•æ§˜ (èª­ã¾ãªãã¦ã‚ˆã„)ï¼š
+      [ã‚¨ãƒªã‚¢æƒ…å ±å†å–å¾—]ã¯å…¨ã‚¨ãƒªã‚¢ã«ã‚¢ã‚¯ã‚»ã‚¹ã—æƒ…å ±ã‚’å–å¾—ã™ã‚‹ã®ã«å¯¾ã—ã€[ã‚¨ãƒªã‚¢æƒ…å ±æ›´æ–°]ã¯è‰²ãŒæ›´æ–°ã•ã‚ŒãŸã‚»ãƒ«ã®ã¿ã‚’å–å¾—ã™ã‚‹ã‚ˆã†ã«ã—ã¦ã‚ã‚‹ã€‚
+      ã“ã“ã§ã€åŒè‰²ã®Aã¨Bã®ãƒãƒ¼ãƒ ãŒå­˜åœ¨ã™ã‚‹çŠ¶æ³ã‚’æƒ³å®šã™ã‚‹ã€‚
+      ãƒ»Bã®è‰²ã®ã¿ã‚’ç·¨é›†ã—ãŸå ´åˆã€AãŒä¿æŒã™ã‚‹ã‚»ãƒ«ã‚’BãŒç²å¾—ã—ãŸéš›ã€ç·¨é›†å‰ã®è‰²æƒ…å ±ãŒåŒä¸€ã®ãŸã‚ã‚»ãƒ«æƒ…å ±ã®å–å¾—ãŒè¡Œã‚ã‚Œãªã„ã€‚
+      ãƒ»Aã¨Bã®åŒæ–¹ã‚’ç·¨é›†ã—ã¦ãŠãã¨ã€AãŒä¿æŒã™ã‚‹ã‚»ãƒ«ã¯å¸¸ã«è‰²æƒ…å ±ãŒæ›´æ–°ã•ã‚ŒãŸæ‰±ã„ã¨ãªã‚Šå–å¾—å¯¾è±¡ã«ãªã‚‹ã€‚
+      è¦ã™ã‚‹ã«ã€åŒè‰²ã®å ´åˆã¯å…¨ã¦è‰²ã‚’å¤‰ãˆã¦ãŠãã¨ã‚ˆã„ã¨ã„ã†ã“ã¨ã€‚åŒè‰²ãŒã„ãªããªã£ãŸã‚‰æˆ»ã›ã°OK.
       `;
       const resetButton = button.cloneNode();
-      resetButton.textContent = 'Fİ’è‰Šú‰»';
+      resetButton.textContent = 'è‰²è¨­å®šåˆæœŸåŒ–';
       resetButton.addEventListener('click', ()=>{
         delete settings.customColors;
         localStorage.setItem('aat_settings', JSON.stringify(settings));
-        alert('F‚Ìİ’è‚ğ‰Šú‰»‚µ‚Ü‚µ‚½i—vƒGƒŠƒAXVj');
+        alert('è‰²ã®è¨­å®šã‚’åˆæœŸåŒ–ã—ã¾ã—ãŸï¼ˆè¦ã‚¨ãƒªã‚¢æ›´æ–°ï¼‰');
       })
       helpDialog.append(resetButton, div);
       helpDialog.show();
@@ -2197,7 +2197,7 @@
       const text = await res.text();
       const doc = new DOMParser().parseFromString(text,'text/html');
       const h1 = doc?.querySelector('h1')?.textContent;
-      if(h1 !== '‚Ç‚ñ‚®‚èƒ`[ƒ€í‚¢') return Promise.reject(`title.ng`);
+      if(h1 !== 'ã©ã‚“ãã‚Šãƒãƒ¼ãƒ æˆ¦ã„') return Promise.reject(`title.ng`);
       const table = doc.querySelector('table');
       if(!table) throw new Error('table.ng');
       showArenaTable(table);
@@ -2208,7 +2208,7 @@
     function showArenaTable (table){
       const tableRow = table.querySelector('tbody > tr');
       if(!tableRow) return;
-      const coordinate = tableRow.cells[0].textContent.replace('ƒAƒŠ[ƒi','').trim();
+      const coordinate = tableRow.cells[0].textContent.replace('ã‚¢ãƒªãƒ¼ãƒŠ','').trim();
       const holderName = tableRow.cells[1].querySelector('strong');
       const equipCond = tableRow.cells[1].querySelector('small');
       const teamName = tableRow.cells[2].textContent;
@@ -2232,8 +2232,8 @@
 
       cells[0].append(coordinate, hr, equipCond);
       cells[1].append(holderName, document.createElement('br'), `${teamName}`);
-      cells[2].innerText = `Ÿ:${statistics[0]}\n•‰:${statistics[1]}\nˆø:${statistics[2]}`;
-      cells[3].innerText = `‹­‰»:${modCounts[0]}\nã‘Ì:${modCounts[1]}\n${modders}l`;
+      cells[2].innerText = `å‹:${statistics[0]}\nè² :${statistics[1]}\nå¼•:${statistics[2]}`;
+      cells[3].innerText = `å¼·åŒ–:${modCounts[0]}\nå¼±ä½“:${modCounts[1]}\n${modders}äºº`;
       cells[3].style.whiteSpace = 'nowrap';
 
       const [dataRow, dataCol] = coordinate.match(/\d+/g);
@@ -2278,8 +2278,8 @@
       return;
     }
     rank = rank
-      .replace('ƒGƒŠ[ƒg','e')
-      .replace(/.+‚©‚ç|\w+-|‚Ü‚Å|‚¾‚¯|\s|\[|\]|\|/g,'');
+      .replace('ã‚¨ãƒªãƒ¼ãƒˆ','e')
+      .replace(/.+ã‹ã‚‰|\w+-|ã¾ã§|ã ã‘|\s|\[|\]|\|/g,'');
     const autoEquipItems = JSON.parse(localStorage.getItem('autoEquipItems')) || {};
     if (autoEquipItems[rank] && !autoEquipItems[rank]?.includes(currentEquipName)) {
       if (autoEquipItems[rank].length === 0) {
@@ -2354,7 +2354,7 @@
       }
 
       arenaResult.show();
-      // arenaResult.show();‚Ì‚ ‚Æ‚ÅsetTimeout‚ğg—p‚µ‚È‚¢‚ÆˆÊ’u‚ª‚¸‚ê‚é
+      // arenaResult.show();ã®ã‚ã¨ã§setTimeoutã‚’ä½¿ç”¨ã—ãªã„ã¨ä½ç½®ãŒãšã‚Œã‚‹
       setTimeout(() => {
         if (settings.arenaResultScrollPosition === 'bottom') {
           arenaResult.scrollTop = arenaResult.scrollHeight;
@@ -2364,7 +2364,7 @@
       }, 0);
       arenaResult.style.display = '';
 
-      if (lastLine === 'ƒŠ[ƒ_[‚É‚È‚Á‚½' || lastLine.includes('‚ÍV‚µ‚¢ƒAƒŠ[ƒiƒŠ[ƒ_[‚Å‚·B')) {
+      if (lastLine === 'ãƒªãƒ¼ãƒ€ãƒ¼ã«ãªã£ãŸ' || lastLine.includes('ã¯æ–°ã—ã„ã‚¢ãƒªãƒ¼ãƒŠãƒªãƒ¼ãƒ€ãƒ¼ã§ã™ã€‚')) {
         if (!settings.teamColor) return;
         const cell = document.querySelector(`div[data-row="${row}"][data-col="${col}"]`);
         cell.style.background = '#' + settings.teamColor;
@@ -2383,7 +2383,7 @@
     }
 
     if(rangeAttackQueue.length === 0) {
-      alert('ƒZƒ‹‚ğ‘I‘ğ‚µ‚Ä‚­‚¾‚³‚¢');
+      alert('ã‚»ãƒ«ã‚’é¸æŠã—ã¦ãã ã•ã„');
       return;
     }
 
@@ -2401,7 +2401,7 @@
       if(!rangeAttackProcessing) return;
 
       const cell = rangeAttackQueue[0];
-      // UŒ‚‘O‚É‘I‘ğ‰ğœ‚³‚ê‚½ê‡
+      // æ”»æ’ƒå‰ã«é¸æŠè§£é™¤ã•ã‚ŒãŸå ´åˆ
       if(!cell.classList.contains('selected')) {
         rangeAttackQueue.shift();
         continue;
@@ -2423,15 +2423,15 @@
         let lastLine = text.trim().split('\n').pop();
         if(
           lastLine.length > 100 ||
-          lastLine === '‚Ç‚ñ‚®‚è‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½B'
+          lastLine === 'ã©ã‚“ãã‚ŠãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚'
         ) {
-          throw new Error('‚Ç‚ñ‚®‚è‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½B');
+          throw new Error('ã©ã‚“ãã‚ŠãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚');
         }
         if(
-          lastLine === '‚ ‚È‚½‚Ìƒ`[ƒ€‚Í“®‚«‚ğg‚¢‰Ê‚½‚µ‚Ü‚µ‚½B‚µ‚Î‚ç‚­‚¨‘Ò‚¿‚­‚¾‚³‚¢B' ||
+          lastLine === 'ã‚ãªãŸã®ãƒãƒ¼ãƒ ã¯å‹•ãã‚’ä½¿ã„æœãŸã—ã¾ã—ãŸã€‚ã—ã°ã‚‰ããŠå¾…ã¡ãã ã•ã„ã€‚' ||
           lastLine === 'ng<>too fast' ||
-          lastLine === '•Ší‚Æ–h‹ï‚ğ‘•”õ‚µ‚È‚¯‚ê‚Î‚È‚è‚Ü‚¹‚ñB' ||
-          lastLine === 'Å‰‚Éƒ`[ƒ€‚ÉQ‰Á‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B'
+          lastLine === 'æ­¦å™¨ã¨é˜²å…·ã‚’è£…å‚™ã—ãªã‘ã‚Œã°ãªã‚Šã¾ã›ã‚“ã€‚' ||
+          lastLine === 'æœ€åˆã«ãƒãƒ¼ãƒ ã«å‚åŠ ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚'
         ) {
           throw new Error(lastLine);
         }
@@ -2442,7 +2442,7 @@
         rangeAttackQueue.shift();
       } catch (e) {
         const p = pTemplate.cloneNode();
-        p.textContent = `(${row}, ${col}) [’†’f] ${e}`;
+        p.textContent = `(${row}, ${col}) [ä¸­æ–­] ${e}`;
         arenaResult.prepend(p);
         errorOccurred = true;
         break;
@@ -2454,7 +2454,7 @@
     }
     if(!errorOccurred) {
       const p = pTemplate.cloneNode();
-      p.textContent = `Š®—¹`;
+      p.textContent = `å®Œäº†`;
       arenaResult.prepend(p);
       return true;
     } else {
@@ -2488,7 +2488,7 @@
         p.style.alignItems = 'center';
         p.style.lineHeight = '1';
         p.style.justifyContent = 'center';
-        const rank = cell.dataset.rank.replace(/\w+-|‚¾‚¯/g,'');
+        const rank = cell.dataset.rank.replace(/\w+-|ã ã‘/g,'');
         p.textContent = rank;
         if (rank.length === 3) p.style.fontSize = '14px';
         if (rank.length === 4) p.style.fontSize = '13px';
@@ -2542,7 +2542,7 @@
       timestamp.style.whiteSpace = 'nowrap';
 
       const regionDiv = document.createElement('div');
-      const progress = `${currentPeriod}Šú ${currentProgress}%`;
+      const progress = `${currentPeriod}æœŸ ${currentProgress}%`;
       if (region) regionDiv.innerText = `${progress}\nchallenge: ${region}\n${next}`;
       else regionDiv.innerText = next;
       regionDiv.style.fontSize = '90%';
@@ -2567,40 +2567,40 @@
 
     const messageTypes = {
       retry: [
-        '‚ ‚È‚½‚Ìƒ`[ƒ€‚Í“®‚«‚ğg‚¢‰Ê‚½‚µ‚Ü‚µ‚½B‚µ‚Î‚ç‚­‚¨‘Ò‚¿‚­‚¾‚³‚¢B',
+        'ã‚ãªãŸã®ãƒãƒ¼ãƒ ã¯å‹•ãã‚’ä½¿ã„æœãŸã—ã¾ã—ãŸã€‚ã—ã°ã‚‰ããŠå¾…ã¡ãã ã•ã„ã€‚',
         'ng<>too fast',
       ],
       reset: [
-        '‚±‚Ìƒ^ƒCƒ‹‚ÍUŒ‚‚Å‚«‚Ü‚¹‚ñB”ÍˆÍŠO‚Å‚·B',
+        'ã“ã®ã‚¿ã‚¤ãƒ«ã¯æ”»æ’ƒã§ãã¾ã›ã‚“ã€‚ç¯„å›²å¤–ã§ã™ã€‚',
       ],
       quit: [
-        'Å‰‚Éƒ`[ƒ€‚ÉQ‰Á‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B',
-        '‚Ç‚ñ‚®‚è‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½B',
-        '‚ ‚È‚½‚Ì‚Ç‚ñ‚®‚è‚ª—‰ğ‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B',
-        'ƒŒƒxƒ‹‚ª’á‚·‚¬‚Ü‚·B'
+        'æœ€åˆã«ãƒãƒ¼ãƒ ã«å‚åŠ ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚',
+        'ã©ã‚“ãã‚ŠãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚',
+        'ã‚ãªãŸã®ã©ã‚“ãã‚ŠãŒç†è§£ã§ãã¾ã›ã‚“ã§ã—ãŸã€‚',
+        'ãƒ¬ãƒ™ãƒ«ãŒä½ã™ãã¾ã™ã€‚'
       ],
       equipError: [
-        '•Ší‚Æ–h‹ï‚ğ‘•”õ‚µ‚È‚¯‚ê‚Î‚È‚è‚Ü‚¹‚ñB',
-        '‘•”õ‚µ‚Ä‚¢‚é–h‹ï‚Æ•Ší‚ª—Í•s‘«‚Å‚·B',
-        '‘•”õ‚µ‚Ä‚¢‚é–h‹ï‚Æ•Ší‚ª‹­‚·‚¬‚Ü‚·',
-        '‘•”õ‚µ‚Ä‚¢‚é‚à‚Ì‚Í‰ü‘¢‚ª‘½‚·‚¬‚Ü‚·B‰ü‘¢‚Ì­‚È‚¢‘¼‚Ì‚à‚Ì‚ğ‚¨‚µ‚­‚¾‚³‚¢'
+        'æ­¦å™¨ã¨é˜²å…·ã‚’è£…å‚™ã—ãªã‘ã‚Œã°ãªã‚Šã¾ã›ã‚“ã€‚',
+        'è£…å‚™ã—ã¦ã„ã‚‹é˜²å…·ã¨æ­¦å™¨ãŒåŠ›ä¸è¶³ã§ã™ã€‚',
+        'è£…å‚™ã—ã¦ã„ã‚‹é˜²å…·ã¨æ­¦å™¨ãŒå¼·ã™ãã¾ã™',
+        'è£…å‚™ã—ã¦ã„ã‚‹ã‚‚ã®ã¯æ”¹é€ ãŒå¤šã™ãã¾ã™ã€‚æ”¹é€ ã®å°‘ãªã„ä»–ã®ã‚‚ã®ã‚’ãŠè©¦ã—ãã ã•ã„'
       ],
       nonAdjacent: [
-        '‚±‚Ìƒ^ƒCƒ‹‚ÍUŒ‚‚Å‚«‚Ü‚¹‚ñB‚ ‚È‚½‚Ìƒ`[ƒ€‚ªñ“s‚ğ‚Â‚Ü‚ÅA‚Ç‚Ìñ“s‚É‚à—×Ú‚·‚éƒ^ƒCƒ‹‚ğå’£‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB',
-        '‚ ‚È‚½‚Ìƒ`[ƒ€‚Íñ“s‚ğ‚Á‚Ä‚¢‚È‚¢‚½‚ßA‘¼‚Ìƒ`[ƒ€‚Ìñ“s‚ÉUŒ‚‚Å‚«‚Ü‚¹‚ñB'
+        'ã“ã®ã‚¿ã‚¤ãƒ«ã¯æ”»æ’ƒã§ãã¾ã›ã‚“ã€‚ã‚ãªãŸã®ãƒãƒ¼ãƒ ãŒé¦–éƒ½ã‚’æŒã¤ã¾ã§ã€ã©ã®é¦–éƒ½ã«ã‚‚éš£æ¥ã™ã‚‹ã‚¿ã‚¤ãƒ«ã‚’ä¸»å¼µã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“ã€‚',
+        'ã‚ãªãŸã®ãƒãƒ¼ãƒ ã¯é¦–éƒ½ã‚’æŒã£ã¦ã„ãªã„ãŸã‚ã€ä»–ã®ãƒãƒ¼ãƒ ã®é¦–éƒ½ã«æ”»æ’ƒã§ãã¾ã›ã‚“ã€‚'
       ],
       teamAdjacent: [
-        '‚±‚Ìƒ^ƒCƒ‹‚ÍUŒ‚‚Å‚«‚Ü‚¹‚ñB‚ ‚È‚½‚Ìƒ`[ƒ€‚Ì§Œä—Ì“y‚É—×Ú‚µ‚Ä‚¢‚È‚¯‚ê‚Î‚È‚è‚Ü‚¹‚ñB',
-        // '‚±‚Ìƒ^ƒCƒ‹‚ÍUŒ‚‚Å‚«‚Ü‚¹‚ñBñ“s‚ğ’Dæ‚·‚é‚É‚ÍA—×Úƒ^ƒCƒ‹‚ğ3‚ÂˆÈãx”z‚µ‚Ä‚¢‚é•K—v‚ª‚ ‚è‚Ü‚·B',
-        '‚±‚Ìƒ^ƒCƒ‹‚ÍUŒ‚‚Å‚«‚Ü‚¹‚ñBñ“s‚ğ’Dæ‚·‚é‚É‚ÍA—×Úƒ^ƒCƒ‹‚ğ­‚È‚­‚Æ‚à3‚Âx”z‚µ‚Ä‚¢‚é•K—v‚ª‚ ‚è‚Ü‚·B',
-        '‚±‚Ìƒ^ƒCƒ‹‚ÍUŒ‚‚Å‚«‚Ü‚¹‚ñBñ“s‚ğ’Dæ‚·‚é‚É‚ÍA—×Úƒ^ƒCƒ‹‚ğ­‚È‚­‚Æ‚à2‚Âx”z‚µ‚Ä‚¢‚é•K—v‚ª‚ ‚è‚Ü‚·B',
-        '‚±‚Ìƒ^ƒCƒ‹‚ÍUŒ‚‚Å‚«‚Ü‚¹‚ñB©•ª‚Ìñ“s‚ÍUŒ‚‚Å‚«‚Ü‚¹‚ñB'
+        'ã“ã®ã‚¿ã‚¤ãƒ«ã¯æ”»æ’ƒã§ãã¾ã›ã‚“ã€‚ã‚ãªãŸã®ãƒãƒ¼ãƒ ã®åˆ¶å¾¡é ˜åœŸã«éš£æ¥ã—ã¦ã„ãªã‘ã‚Œã°ãªã‚Šã¾ã›ã‚“ã€‚',
+        // 'ã“ã®ã‚¿ã‚¤ãƒ«ã¯æ”»æ’ƒã§ãã¾ã›ã‚“ã€‚é¦–éƒ½ã‚’å¥ªå–ã™ã‚‹ã«ã¯ã€éš£æ¥ã‚¿ã‚¤ãƒ«ã‚’3ã¤ä»¥ä¸Šæ”¯é…ã—ã¦ã„ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚',
+        'ã“ã®ã‚¿ã‚¤ãƒ«ã¯æ”»æ’ƒã§ãã¾ã›ã‚“ã€‚é¦–éƒ½ã‚’å¥ªå–ã™ã‚‹ã«ã¯ã€éš£æ¥ã‚¿ã‚¤ãƒ«ã‚’å°‘ãªãã¨ã‚‚3ã¤æ”¯é…ã—ã¦ã„ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚',
+        'ã“ã®ã‚¿ã‚¤ãƒ«ã¯æ”»æ’ƒã§ãã¾ã›ã‚“ã€‚é¦–éƒ½ã‚’å¥ªå–ã™ã‚‹ã«ã¯ã€éš£æ¥ã‚¿ã‚¤ãƒ«ã‚’å°‘ãªãã¨ã‚‚2ã¤æ”¯é…ã—ã¦ã„ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚',
+        'ã“ã®ã‚¿ã‚¤ãƒ«ã¯æ”»æ’ƒã§ãã¾ã›ã‚“ã€‚è‡ªåˆ†ã®é¦–éƒ½ã¯æ”»æ’ƒã§ãã¾ã›ã‚“ã€‚'
       ],
       capitalAdjacent: [
-        '‚±‚Ìƒ^ƒCƒ‹‚ÍUŒ‚‚Å‚«‚Ü‚¹‚ñB¬G‚µ‚½ƒ}ƒbƒv‚Å‚ÍA‰Šúå’£‚Í³Šm‚É1‚Â‚Ìñ“s‚É—×Ú‚µ‚Ä‚¢‚È‚¯‚ê‚Î‚È‚è‚Ü‚¹‚ñB'
+        'ã“ã®ã‚¿ã‚¤ãƒ«ã¯æ”»æ’ƒã§ãã¾ã›ã‚“ã€‚æ··é›‘ã—ãŸãƒãƒƒãƒ—ã§ã¯ã€åˆæœŸä¸»å¼µã¯æ­£ç¢ºã«1ã¤ã®é¦–éƒ½ã«éš£æ¥ã—ã¦ã„ãªã‘ã‚Œã°ãªã‚Šã¾ã›ã‚“ã€‚'
       ],
       mapEdge: [
-        '‚±‚Ìƒ^ƒCƒ‹‚ÍUŒ‚‚Å‚«‚Ü‚¹‚ñB¬G‚µ‚½ƒ}ƒbƒv‚Å‚ÍA‰Šúå’£‚Íƒ}ƒbƒv‚Ì’[‚Å‚È‚¯‚ê‚Î‚È‚è‚Ü‚¹‚ñB'
+        'ã“ã®ã‚¿ã‚¤ãƒ«ã¯æ”»æ’ƒã§ãã¾ã›ã‚“ã€‚æ··é›‘ã—ãŸãƒãƒƒãƒ—ã§ã¯ã€åˆæœŸä¸»å¼µã¯ãƒãƒƒãƒ—ã®ç«¯ã§ãªã‘ã‚Œã°ãªã‚Šã¾ã›ã‚“ã€‚'
       ]
     }
 
@@ -2654,11 +2654,11 @@
             let processType;
             let sleepTime = 2;
 
-            if (text.startsWith('ƒAƒŠ[ƒiƒ`ƒƒƒŒƒ“ƒWŠJn')
-              || text.startsWith('ƒŠ[ƒ_[‚É‚È‚Á‚½')
+            if (text.startsWith('ã‚¢ãƒªãƒ¼ãƒŠãƒãƒ£ãƒ¬ãƒ³ã‚¸é–‹å§‹')
+              || text.startsWith('ãƒªãƒ¼ãƒ€ãƒ¼ã«ãªã£ãŸ')
             ) {
               success = true;
-              message = '[¬Œ÷] ' + lastLine;
+              message = '[æˆåŠŸ] ' + lastLine;
               processType = 'return';
             } else if (messageType === 'retry') {
               sleepTime = 20;
@@ -2667,10 +2667,10 @@
               processType = 'continue';
               message += ` (${cellRank}, ${currentEquipName})`;
             } else if (lastLine.length > 100) {
-              message = '‚Ç‚ñ‚®‚èƒVƒXƒeƒ€';
+              message = 'ã©ã‚“ãã‚Šã‚·ã‚¹ãƒ†ãƒ ';
               processType = 'continue';
             } else if (messageType === 'quit') {
-              message = '[’â~] ' + lastLine;
+              message = '[åœæ­¢] ' + lastLine;
               processType = 'return';
               clearInterval(autoJoinIntervalId);
             } else if (messageType === 'reset') {
@@ -2700,13 +2700,13 @@
               } else {
                 nextProgress = Math.floor(Math.random() * 10) + 20; // 20 ~ 30 +- 5
               }
-              next = `¨ ${nextProgress}}5%`;
+              next = `â†’ ${nextProgress}Â±5%`;
               isAutoJoinRunning = false;
             } else if (processType === 'return') {
               next = '';
               isAutoJoinRunning = false;
             } else {
-              next = `¨ ${sleepTime}s`;
+              next = `â†’ ${sleepTime}s`;
             }
 
             logMessage(region, message, next);
@@ -2737,8 +2737,8 @@
                 message = e;
                 break;
             }
-            if (e.message === 'ÄƒƒOƒCƒ“‚µ‚Ä‚­‚¾‚³‚¢') {
-              logMessage(region, '[’â~] ‚Ç‚ñ‚®‚è‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½', '');
+            if (e.message === 'å†ãƒ­ã‚°ã‚¤ãƒ³ã—ã¦ãã ã•ã„') {
+              logMessage(region, '[åœæ­¢] ã©ã‚“ãã‚ŠãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸ', '');
               isAutoJoinRunning = false;
               clearInterval(autoJoinIntervalId);
               return;
@@ -2751,11 +2751,11 @@
               errorCount++;
               let sleepTime = 20 * errorCount;
               if(sleepTime > 600) sleepTime = 600;
-              logMessage(region, message, `¨ ${sleepTime}s`);
+              logMessage(region, message, `â†’ ${sleepTime}s`);
               await sleep(sleepTime * 1000);
             } else {
               let sleepTime = 20;
-              logMessage(region, e, `¨ ${sleepTime}s`);
+              logMessage(region, e, `â†’ ${sleepTime}s`);
               await sleep(sleepTime * 1000);
             }
           }
@@ -2766,9 +2766,9 @@
           } else {
             nextProgress = Math.floor(Math.random() * 10) + 20; // 20 ~ 30 +- 5
           }
-          const next = `¨ ${nextProgress}}5%`;
+          const next = `â†’ ${nextProgress}Â±5%`;
           isAutoJoinRunning = false;
-          logMessage(null, 'UŒ‚‰Â”\‚Èƒ^ƒCƒ‹‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½B', next);
+          logMessage(null, 'æ”»æ’ƒå¯èƒ½ãªã‚¿ã‚¤ãƒ«ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚', next);
           return;
         }
       }
@@ -2781,7 +2781,7 @@
         const text = await res.text();
         const doc = new DOMParser().parseFromString(text, 'text/html');
         const h1 = doc?.querySelector('h1')?.textContent;
-        if (h1 !== '‚Ç‚ñ‚®‚èƒ`[ƒ€í‚¢') throw new Error('title.ng info');
+        if (h1 !== 'ã©ã‚“ãã‚Šãƒãƒ¼ãƒ æˆ¦ã„') throw new Error('title.ng info');
 
         const scriptContent = doc.querySelector('.grid > script').textContent;
         const cellColorsString = scriptContent.match(/const cellColors = ({.+?})/s)[1];
@@ -2920,13 +2920,13 @@
         const text = await res.text();
         const doc = new DOMParser().parseFromString(text,'text/html');
         const h1 = doc?.querySelector('h1')?.textContent;
-        if(h1 !== '‚Ç‚ñ‚®‚èƒ`[ƒ€í‚¢') return Promise.reject(`title.ng`);
+        if(h1 !== 'ã©ã‚“ãã‚Šãƒãƒ¼ãƒ æˆ¦ã„') return Promise.reject(`title.ng`);
         const table = doc.querySelector('table');
         if(!table) throw new Error('table.ng');
         const equipCond = table.querySelector('td small').textContent;
         const rank = equipCond
-          .replace('ƒGƒŠ[ƒg','e')
-          .replace(/.+‚©‚ç|\w+-|‚Ü‚Å|‚¾‚¯|\s|\[|\]|\|/g,'');
+          .replace('ã‚¨ãƒªãƒ¼ãƒˆ','e')
+          .replace(/.+ã‹ã‚‰|\w+-|ã¾ã§|ã ã‘|\s|\[|\]|\|/g,'');
         const autoEquipItems = JSON.parse(localStorage.getItem('autoEquipItems')) || {};
         const autoEquipItemsAutojoin = JSON.parse(localStorage.getItem('autoEquipItemsAutojoin')) || {};
 
@@ -2965,7 +2965,7 @@
       let str,min,totalSec,sec,margin;
 
       if (currentProgress === 0 || currentProgress === 50) {
-        str = 'iƒ}ƒbƒvXVj';
+        str = 'ï¼ˆãƒãƒƒãƒ—æ›´æ–°æ™‚ï¼‰';
       } else {
         if (currentProgress === 100) {
           min = 0;
@@ -2977,15 +2977,15 @@
           sec = totalSec % 60;
           margin = 20;
         }
-        str = 'iƒ}ƒbƒvXV‚Ü‚Å' + min + '•ª' + sec + '•b \xb1' + margin + '•bj';
+        str = 'ï¼ˆãƒãƒƒãƒ—æ›´æ–°ã¾ã§' + min + 'åˆ†' + sec + 'ç§’ \xb1' + margin + 'ç§’ï¼‰';
       }
       progressBarBody.textContent = currentProgress + '%';
       progressBarBody.style.width = currentProgress + '%';
-      progressBarInfo.textContent = `‘æ ${currentPeriod} Šú${str}`;
+      progressBarInfo.textContent = `ç¬¬ ${currentPeriod} æœŸ${str}`;
 
       const statBlock = doc.querySelector('.stat-block');
-      wood = statBlock.textContent.match(/–ØŞ‚Ì”: (\d+)/)[1];
-      steel = statBlock.textContent.match(/“S‚Ì”: (\d+)/)[1];
+      wood = statBlock.textContent.match(/æœ¨æã®æ•°: (\d+)/)[1];
+      steel = statBlock.textContent.match(/é‰„ã®æ•°: (\d+)/)[1];
     } catch (e) {
       console.error(e+' drawProgressBar()')
     }
@@ -2998,7 +2998,7 @@
     autoJoin();
   }
   let progressBarIntervalId = setInterval(drawProgressBar, 18000);
-  (()=>{ // autoJoin‚ÆprogressBar‚ÌintervalŠÇ—
+  (()=>{ // autoJoinã¨progressBarã®intervalç®¡ç†
     function stopAutoJoin() {
       if (autoJoinIntervalId) {
         clearInterval(autoJoinIntervalId);
@@ -3023,3 +3023,4 @@
     });
   })();
 })();
+
